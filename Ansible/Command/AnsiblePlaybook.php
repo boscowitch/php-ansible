@@ -266,6 +266,22 @@ final class AnsiblePlaybook extends AbstractAnsibleCommand implements AnsiblePla
         return $this;
     }
 
+
+     /**
+     * Set Custom Environmen Variables
+     *
+     * @codeCoverageIgnore
+     * @return $this
+     */
+    public function setEnv($name, $value)
+    {
+        $this->processBuilder->setEnv($name, $value);
+
+        return $this;
+    }
+
+
+
     /**
      * Use this file to authenticate the connection.
      *
